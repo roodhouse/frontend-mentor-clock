@@ -3,8 +3,8 @@ import React from 'react'
 function Popup() {
   return (
     <>
-        <div id="popupContainer" className='backdrop-blur-[20px] px-[26px] py-12'>
-            <div id="timezoneContainer" className='flex justify-between mb-4'>
+        <div id="popupContainer" className='backdrop-blur-[20px] px-[26px] py-12 md:flex md:py-[120px] md:px-16'>
+            <div id="timezoneContainer" className='flex justify-between mb-4 md:flex-col'>
                 <div id='zoneLabel' className='text-[10px] font-normal leading-7 tracking-[2px] uppercase'>
                     <p>CURRENT TIMEZONE</p>
                 </div>
@@ -12,7 +12,7 @@ function Popup() {
                     <p>Europe/London</p>
                 </div>
             </div>
-            <div id="yearContainer" className='flex justify-between mb-4'>
+            <div id="yearContainer" className='flex justify-between mb-4 md:flex-col'>
                 <div id="yearLabel" className='text-[10px] font-normal leading-7 tracking-[2px] uppercase'>
                     <p>Day of the year</p>
                 </div>
@@ -20,7 +20,7 @@ function Popup() {
                     <p>295</p>
                 </div>                
             </div>
-            <div id="weekContainer" className='flex justify-between mb-4'>
+            <div id="weekContainer" className='flex justify-between mb-4 md:flex-col'>
                 <div id="weekLabel" className='text-[10px] font-normal leading-7 tracking-[2px] uppercase'>
                     <p>Day of the week</p>
                 </div>
@@ -28,7 +28,7 @@ function Popup() {
                     <p>5</p>
                 </div>
             </div>
-            <div id="weekNumberContainer" className='flex justify-between'>
+            <div id="weekNumberContainer" className='flex justify-between md:flex-col'>
                 <div id="weekNumberLabel" className='text-[10px] font-normal leading-7 tracking-[2px] uppercase'>
                     <p>Week number</p>
                 </div>
