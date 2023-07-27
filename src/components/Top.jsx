@@ -5,15 +5,15 @@ function Top() {
   return (
     <>
         <div id="topContainer" className='flex justify-between'>
-            <div id="quoteContainer" className='flex flex-col w-[290px]'>
-                <div id="quote" className='text-white text-xs font-normal leading-[22px] text-left mb-2'>
+            <div id="quoteContainer" className='flex flex-col w-[290px] md:w-[540px]'>
+                <div id="quote" className='text-white text-xs font-normal leading-[22px] text-left mb-2 md:text-lg md:mb-[13px]'>
                     <p>“The science of operations, as derived from mathematics more especially, is a science of itself, and has its own abstract truth and value.”</p>
                 </div>
-                <div id="author" className='text-white text-xs font-bold leading-[22px] text-left'>
+                <div id="author" className='text-white text-xs font-bold leading-[22px] text-left md:text-lg'>
                     <p>Ada Lovelace</p>
                 </div>
             </div>
-            <div id="refreshContainer" className=''>
+            <div id="refreshContainer" className='md:mt-[10px]'>
                 <img src={Refresh} alt="refresh" className='w-4 h-4' />
             </div>
         </div>
