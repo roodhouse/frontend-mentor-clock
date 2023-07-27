@@ -22,7 +22,7 @@ function App() {
         <div id='buttonWrapper' className='px-[26px] md:pl-16 md:pr-[132px]'>
           <Button />
         </div>
-        <div id='popupWrapper' className='day'>
+        <div id='popupWrapper' className='hidden day'>
           <Popup />
         </div>
       </div>
