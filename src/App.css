@@ -3,6 +3,10 @@
   color: #303030;
 }
 
+.day .bar {
+  background-color: #303030;
+}
+
 .night #popupContainer {
   background-color: rgba(0, 0, 0, 1);
   color: white;
