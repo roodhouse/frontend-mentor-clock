@@ -4,7 +4,8 @@ import Copy from './components/Copy'
 import Button from './components/Button'
 import Popup from './components/Popup'
 
-// create dark mode for all components
+// tabview
+// full view
 // hook up button
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
         <div id='buttonWrapper' className='px-[26px]'>
           <Button />
         </div>
-        <div id='popupWrapper'>
+        <div id='popupWrapper' className='hidden day'>
           <Popup />
         </div>
       </div>
