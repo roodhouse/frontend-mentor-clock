@@ -6,7 +6,6 @@ import Popup from './components/Popup'
 import Ipbase from '@everapi/ipbase-js'
 
 // api
-  // update background image to change based on time of day
 // hover states
 // height issue
 
@@ -39,7 +38,6 @@ fetch(worldTime)
       
         let datetime = theRes.datetime
 
-        console.log(theRes)
         document.getElementById('place').firstChild.innerHTML = theRes.timezone
         document.getElementById('yearDay').firstChild.innerHTML = theRes.day_of_year
         document.getElementById('weekDay').firstChild.innerHTML = theRes.day_of_week
@@ -75,17 +73,33 @@ fetch(worldTime)
     }
   })
 
+  fetch('https://api.quotable.io/quotes/random')
+    .then(function (response) {
+      if (!response.ok) {
+        console.log('error')
+      } else {
+        return response.json()
+        .then(function (res) {
+          console.log(res)
+          document.getElementById('quote').firstChild.innerHTML = res[0].content
+          document.getElementById('author').firstChild.innerHTML = res[0].author
+
+        })
+      }
+      
+    })
+
 
 
   return (
     <div className="App closed h-screen" id='app'>
      <div id='mainWrapper' className='mainDay h-full bg-no-repeat bg-cover'>
       <div id='mainContainer' className='h-full pt-8 pb-10 bg-black bg-opacity-40 md:pt-20 md:pb-16 xl:pt-[56px] xl:pb-[98px]'>
-        <div id='topWrapper' className='px-[26px] md:pl-16 md:pr-[132px] xl:px-[165px]'>
+        <div id='topWrapper' className='h-[227px] md:h-[388px] xl:h-[233px] px-[26px] md:pl-16 md:pr-[132px] xl:px-[165px]'>
           <Top />
         </div>
         <div id='copyButtonWraper' className='xl:flex xl:items-end xl:justify-end'>
-          <div id='copyWrapper' className='mt-[227px] mb-12 px-[26px] md:pl-16 md:pr-[132px] md:mt-[388px] md:mb-20 xl:px-[165px] xl:mt-[233px] xl:mb-0'>
+          <div id='copyWrapper' className='mb-12 px-[26px] md:pl-16 md:pr-[132px] md:mb-20 xl:px-[165px] xl:mb-0'>
             <Copy />
           </div>
           <div id='buttonWrapper' className='px-[26px] md:pl-16 md:pr-[132px] xl:px-[165px]'>
