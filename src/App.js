@@ -6,41 +6,49 @@ import Popup from './components/Popup'
 import Ipbase from '@everapi/ipbase-js'
 
 // api
+  // update background image to change based on time of day
 // hover states
 // height issue
 
 function App() {
 
-//   const ipBase = new Ipbase('ipb_live_tbefEL02pSLDpPULLLaUCVgb5bXYCjkqci983CmG')
-//     ipBase.info().then(response => {
-//     console.log(response)
-// });
+const worldTime = 'https://worldtimeapi.org/api/ip'
+console.log(worldTime)
 
-// const worldTime = 'https://worldtimeapi.org/api/ip'
-// console.log(worldTime)
+fetch(worldTime)
+  .then(function (response) {
+    if (!response.ok) {
+      console.log('error')
+    } else {
+      return response.json()
 
-// fetch(worldTime)
-//   .then(function (response) {
-//     if (!response.ok) {
-//       console.log('error')
-//     } else {
-//       // console.log(response.json())
-//       return response.json()
-
-//       .then(function(theRes) {
-//         console.log(theRes)
-//         const ip = theRes.client_ip
-//         console.log(ip)
-
-//           const ipBase = new Ipbase('ipb_live_tbefEL02pSLDpPULLLaUCVgb5bXYCjkqci983CmG')
-//           ipBase.info({
-//             ip: ip
-//           }).then(response => {
-//             console.log(response)
-//           })
-//       })
-//     }
-//   })
+      .then(function(theRes) {
+        console.log(theRes)
+        let datetime = theRes.datetime
+        console.log(datetime)
+        datetime = datetime.split('T')
+        datetime = datetime[1].split('.')
+        datetime = datetime[0].slice(0,-3)
+        console.log(datetime)
+        document.getElementById('theTime').firstChild.innerHTML = datetime
+        document.getElementById('timeZone').firstChild.innerHTML = theRes.abbreviation
+        datetime = datetime.slice(0,-3)
+        datetime = parseInt(datetime)
+        console.log(datetime)
+        let goodDay = document.getElementById('goodDay')
+        if (datetime >= 0 && datetime <= 11 ) {
+          goodDay.innerHTML = 'Good Morning'
+        } else if (datetime >= 12 && datetime <= 17) {
+          console.log('afternoon')
+          goodDay.innerHTML = 'Good Afternoon'
+        } else if (datetime >= 18 && datetime <= 23) {
+          console.log('evening')
+          goodDay.innerHTML = 'Good Evening'
+        }
+        
+      })
+    }
+  })
 
 fetch('https://api.ipify.org?format=json')
   .then(response => response.json())
@@ -52,7 +60,6 @@ fetch('https://api.ipify.org?format=json')
     }).then(response => {
       console.log(response)
       let data = response.data
-      console.log(data)
       document.getElementById('placeCity').innerHTML = data.location.city.name + ' ' + data.location.region.name
       document.getElementById('placeCountry').innerHTML = data.location.country.emoji
     })
