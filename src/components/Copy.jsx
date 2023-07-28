@@ -18,7 +18,7 @@ function Copy() {
                     <p>BST</p>
                 </div>
             </div>
-            <div id="place" className='text-white text-[15px] font-bold leading-7 tracking-[3px] uppercase text-left md:text-lg md:tracking-[3.6px] xl:text-[28px] xl:tracking-[4.8px]'>
+            <div id="location" className='text-white text-[15px] font-bold leading-7 tracking-[3px] uppercase text-left md:text-lg md:tracking-[3.6px] xl:text-[28px] xl:tracking-[4.8px]'>
                 <p>In <span id='placeCity'></span>, <span id='placeCountry'></span></p>
             </div>
         </div>

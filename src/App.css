@@ -11,3 +11,33 @@
   background-color: rgba(0, 0, 0, 1);
   color: white;
 }
+
+.mainDay {
+  background-image: url('../src/assets/mobile/bg-image-daytime.jpg');
+}
+
+.mainNight {
+  background-image: url('../src/assets/mobile/bg-image-nighttime.jpg');
+}
+
+@media (min-width: 768px) {
+  .mainDay {
+    background-image: url('../src/assets/tablet/bg-image-daytime.jpg');
+  }
+
+  .mainNight {
+    background-image: url('../src/assets/tablet/bg-image-nighttime.jpg');
+  }
+
+}
+
+@media (min-width: 1280px) {
+  .mainDay {
+    background-image: url('../src/assets/desktop/bg-image-daytime.jpg');
+  }
+
+  .mainNight {
+    background-image: url('../src/assets/desktop/bg-image-nighttime.jpg');
+  }
+
+}
