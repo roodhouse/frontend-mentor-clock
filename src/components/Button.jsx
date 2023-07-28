@@ -6,7 +6,7 @@ function Button() {
   // show or hide the details depending upon the show state
   const [show, setShow] = useState('closed')
   const [button, setButton] = useState()
-console.log(show)
+
   useEffect(() => {    
     let buttonContainer = document.getElementById('buttonContainer')
 
@@ -17,7 +17,7 @@ console.log(show)
 
   function showMore() {
     let app = document.getElementById('app')
-    console.log(app)
+    
     if (app.classList.contains('closed')) {
       document.getElementById('buttonImage').classList.add('rotate-180')
       document.getElementById('buttonWrapper').classList.add('mb-10', 'md:mb-16')
