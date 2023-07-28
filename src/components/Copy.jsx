@@ -19,7 +19,7 @@ function Copy() {
                 </div>
             </div>
             <div id="place" className='text-white text-[15px] font-bold leading-7 tracking-[3px] uppercase text-left md:text-lg md:tracking-[3.6px] xl:text-[28px] xl:tracking-[4.8px]'>
-                <p>In London, UK</p>
+                <p>In <span id='placeCity'>London</span>, <span id='placeCountry'>UK</span></p>
             </div>
         </div>
     </>
