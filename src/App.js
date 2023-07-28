@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react'
 import './App.css';
 import Top from './components/Top'
 import Copy from './components/Copy'
@@ -7,7 +8,27 @@ import Ipbase from '@everapi/ipbase-js'
 
 // height issue
 
+
 function App() {
+
+  useEffect(() => {
+    let screen = window.innerHeight
+    let app = document.getElementById('app')
+    console.log(`app height = ${app.clientHeight} and screen height = ${screen}`)
+
+    if ( app.clientHeight < screen ) {
+      console.log('boom')
+      app.classList.remove('h-full')
+      app.classList.add('h-screen')
+      // document.getElementById('mainWrapper').classList.remove('h-full')
+      // document.getElementById('mainContainer').classList.remove('h-full')
+      // document.getElementById('mainWrapper').classList.add('h-screen')
+      // document.getElementById('mainContainer').classList.add('h-screen')
+      
+    }
+
+
+  },[])
 
 const worldTime = 'https://worldtimeapi.org/api/ip'
 
@@ -88,16 +109,15 @@ fetch(worldTime)
     })
 
 
-
   return (
-    <div className="App closed h-screen" id='app'>
+    <div className="App closed h-full" id='app'>
      <div id='mainWrapper' className='mainDay h-full bg-no-repeat bg-cover'>
       <div id='mainContainer' className='h-full pt-8 pb-10 bg-black bg-opacity-40 md:pt-20 md:pb-16 xl:pt-[56px] xl:pb-[98px]'>
         <div id='topWrapper' className='h-[227px] md:h-[388px] xl:h-[233px] px-[26px] md:pl-16 md:pr-[132px] xl:px-[165px]'>
           <Top />
         </div>
-        <div id='copyButtonWraper' className='xl:flex xl:items-end xl:justify-end'>
-          <div id='copyWrapper' className='mb-12 px-[26px] md:pl-16 md:pr-[132px] md:mb-20 xl:px-[165px] xl:mb-0'>
+        <div id='copyButtonWraper' className='lg:flex lg:items-end lg:justify-end'>
+          <div id='copyWrapper' className='mb-12 px-[26px] md:pl-16 md:pr-[132px] md:mb-20 lg:!mb-0 xl:px-[165px] xl:mb-0'>
             <Copy />
           </div>
           <div id='buttonWrapper' className='px-[26px] md:pl-16 md:pr-[132px] xl:px-[165px]'>

@@ -3,6 +3,7 @@ import ArrowDown from '../assets/desktop/icon-arrow-down.svg'
 
 function Button() {
 
+
   // show or hide the details depending upon the show state
   const [show, setShow] = useState('closed')
   const [button, setButton] = useState()
@@ -37,7 +38,7 @@ function Button() {
       document.getElementById('popupWrapper').classList.remove('hidden')
       document.getElementById('topWrapper').classList.add('hidden')
       document.getElementById('copyWrapper').classList.add('!mt-0')
-      document.getElementById('mainContainer').classList.add('pt-[99px]', 'md:pt-[153px]', 'xl:pt-[56px]')
+      document.getElementById('mainContainer').classList.add('pt-[99px]', 'md:pt-[153px]', 'xl:pt-[56px]', 'flex', 'flex-col', '!pb-0', 'justify-between')
       document.getElementById('copyButtonWraper').classList.add('xl:mb-[56px]')
       app.classList.remove('closed')
       app.classList.add('open')
@@ -50,13 +51,18 @@ function Button() {
       document.getElementById('popupWrapper').classList.add('hidden')
       document.getElementById('topWrapper').classList.remove('hidden')
       document.getElementById('copyWrapper').classList.remove('!mt-0')
-      document.getElementById('mainContainer').classList.remove('pt-[99px]', 'md:pt-[153px]', 'xl:pt-[56px]')
+      document.getElementById('mainContainer').classList.remove('pt-[99px]', 'md:pt-[153px]', 'xl:pt-[56px]', 'flex', 'flex-col', '!pb-0', 'justify-between')
       document.getElementById('copyButtonWraper').classList.remove('xl:mb-[56px]')
       app.classList.remove('open')
       app.classList.add('closed')
       console.log('it was open')
     }
   }
+
+  // display: flex;
+// flex-direction: column;
+// padding-bottom: 0;
+// justify-content: flex-end;
   return (
     <>
         <div id="buttonContainer" className='flex w-[115px] bg-white rounded-[28px] justify-between items-center pt-1 pr-1 pb-1 pl-[17px] md:w-[146px] md:pl-[21px] md:pr-2 md:py-2'>
