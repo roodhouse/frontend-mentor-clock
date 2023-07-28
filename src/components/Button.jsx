@@ -11,8 +11,20 @@ function Button() {
     let buttonContainer = document.getElementById('buttonContainer')
 
     buttonContainer.addEventListener('click', showMore)
+    buttonContainer.addEventListener('mouseover', hoverState)
+    buttonContainer.addEventListener('mouseout', unHoverState)
     
   },[])
+
+  function hoverState() {
+    document.getElementById('buttonIcon').classList.remove('bg-black')
+    document.getElementById('buttonIcon').classList.add('bg-hoverGray')
+  }
+
+  function unHoverState(){
+    document.getElementById('buttonIcon').classList.add('bg-black')
+    document.getElementById('buttonIcon').classList.remove('bg-hoverGray')
+  }
 
 
   function showMore() {
