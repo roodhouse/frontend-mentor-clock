@@ -5,8 +5,6 @@ import Button from './components/Button'
 import Popup from './components/Popup'
 import Ipbase from '@everapi/ipbase-js'
 
-// api
-// hover states
 // height issue
 
 function App() {

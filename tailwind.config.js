@@ -9,7 +9,8 @@ module.exports = {
       white: '#FFFFFF',
       black: '#000000',
       dark: '#303030',
-      gray: 'rgba(255,255,255,0.75)'
+      gray: 'rgba(255,255,255,0.75)',
+      hoverGray: '#999999'
 
     }
   },
