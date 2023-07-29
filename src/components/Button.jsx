@@ -59,10 +59,6 @@ function Button() {
     }
   }
 
-  // display: flex;
-// flex-direction: column;
-// padding-bottom: 0;
-// justify-content: flex-end;
   return (
     <>
         <div id="buttonContainer" className='flex w-[115px] bg-white rounded-[28px] justify-between items-center pt-1 pr-1 pb-1 pl-[17px] md:w-[146px] md:pl-[21px] md:pr-2 md:py-2'>

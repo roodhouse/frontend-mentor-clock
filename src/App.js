@@ -6,9 +6,6 @@ import Button from './components/Button'
 import Popup from './components/Popup'
 import Ipbase from '@everapi/ipbase-js'
 
-// height issue
-
-
 function App() {
 
   useEffect(() => {
@@ -20,10 +17,6 @@ function App() {
       console.log('boom')
       app.classList.remove('h-full')
       app.classList.add('h-screen')
-      // document.getElementById('mainWrapper').classList.remove('h-full')
-      // document.getElementById('mainContainer').classList.remove('h-full')
-      // document.getElementById('mainWrapper').classList.add('h-screen')
-      // document.getElementById('mainContainer').classList.add('h-screen')
       
     }
 
