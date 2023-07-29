@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/frontend-mentor-clock/static/css/main.98529379.css",
+    "main.js": "/frontend-mentor-clock/static/js/main.6536a2b9.js",
+    "static/media/bg-image-nighttime.jpg": "/frontend-mentor-clock/static/media/bg-image-nighttime.a9c730ff6f3e4a40519b.jpg",
+    "static/media/bg-image-daytime.jpg": "/frontend-mentor-clock/static/media/bg-image-daytime.13c049fcfdc590ddcef0.jpg",
+    "static/media/icon-sun.svg": "/frontend-mentor-clock/static/media/icon-sun.cb7a2aac3be7bf88b4cf.svg",
+    "index.html": "/frontend-mentor-clock/index.html",
+    "static/media/icon-refresh.svg": "/frontend-mentor-clock/static/media/icon-refresh.dd4042c8a2d8493ec9ddb2b52692ad11.svg",
+    "static/media/icon-arrow-down.svg": "/frontend-mentor-clock/static/media/icon-arrow-down.4d330a30a2190ce71512b306095fbf41.svg",
+    "main.98529379.css.map": "/frontend-mentor-clock/static/css/main.98529379.css.map",
+    "main.6536a2b9.js.map": "/frontend-mentor-clock/static/js/main.6536a2b9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.98529379.css",
+    "static/js/main.6536a2b9.js"
+  ]
+}
